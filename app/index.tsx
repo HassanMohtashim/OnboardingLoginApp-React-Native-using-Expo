@@ -7,6 +7,14 @@ export default function FirstOnboarding() {
 
   return (
     <View style={styles.container}>
+      {/* Skip Button */}
+      <TouchableOpacity 
+        style={styles.skipButton} 
+        onPress={() => router.push("/login")}
+      >
+        <Text style={styles.skipButtonText}>Skip</Text>
+      </TouchableOpacity>
+
       {/* Title */}
       <Text style={styles.title}>Welcome to TravelEase</Text>
 
@@ -44,12 +52,23 @@ const styles = StyleSheet.create({
     justifyContent: "space-between", // Space between content and button
     padding: 20,
   },
+  skipButton: {
+    position: "absolute",
+    top: 10, // Positioning relative to the top
+    right: 20, // Positioning relative to the right
+    padding: 10,
+  },
+  skipButtonText: {
+    fontSize: 16,
+    color: "#007BFF",
+    fontWeight: "bold",
+  },
   title: {
     fontSize: 28,
     fontWeight: "bold",
     color: "#333",
     textAlign: "center", // Centered title
-    marginTop: 20, // Adds space from the top
+    marginTop: 40, // Adds space from the top
   },
   imageBox: {
     alignSelf: "center",

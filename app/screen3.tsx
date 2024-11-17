@@ -8,6 +8,22 @@ export default function OnboardingScreen3() {
 
   return (
     <View style={styles.container}>
+      {/* Back Arrow Button */}
+      <TouchableOpacity
+        style={styles.backButton}
+        onPress={() => router.back()} // Navigate to the previous screen
+      >
+        <FontAwesome name="arrow-left" size={24} color="#007BFF" />
+      </TouchableOpacity>
+
+      {/* Skip Button */}
+      <TouchableOpacity
+        style={styles.skipButton}
+        onPress={() => router.push("/login")} // Navigate to the login screen
+      >
+        <Text style={styles.skipButtonText}>Skip</Text>
+      </TouchableOpacity>
+
       {/* Title */}
       <Text style={styles.title}>Start Your Journey</Text>
 
@@ -23,7 +39,8 @@ export default function OnboardingScreen3() {
 
       {/* Description */}
       <Text style={styles.description}>
-        Ready to explore breathtaking destinations? Create your account now and unlock endless possibilities!
+        Ready to explore breathtaking destinations? Create your account now and
+        unlock endless possibilities!
       </Text>
 
       {/* Button */}
@@ -46,19 +63,38 @@ const styles = StyleSheet.create({
     paddingVertical: 40,
     justifyContent: "space-between",
   },
+  backButton: {
+    position: "absolute",
+    top: 10,
+    left: 20,
+    padding: 10,
+    zIndex: 10, // Ensures the button is on top
+  },
+  skipButton: {
+    position: "absolute",
+    top: 10,
+    right: 20,
+    padding: 10,
+    zIndex: 10, // Ensures the button is on top
+  },
+  skipButtonText: {
+    fontSize: 16,
+    color: "#007BFF",
+    fontWeight: "bold",
+  },
   title: {
     fontSize: 28,
     fontWeight: "bold",
     color: "#333",
     textAlign: "center",
-    marginBottom: 10,
+    marginTop: 20,
   },
   imageBox: {
     alignSelf: "center",
     width: 300, // Custom width for the image box
     height: 200, // Custom height for the image box
     borderRadius: 15, // Rounded corners for the image box
-    overflow: "hidden", // Ensures image stays within box
+    overflow: "hidden", // Ensures the image stays within the box
     justifyContent: "center",
     alignItems: "center",
     borderWidth: 2,

@@ -8,6 +8,22 @@ export default function OnboardingScreen2() {
 
   return (
     <View style={styles.container}>
+      {/* Back Arrow Button */}
+      <TouchableOpacity
+        style={styles.backButton}
+        onPress={() => router.back()} // Navigates to the previous screen
+      >
+        <FontAwesome name="arrow-left" size={24} color="#007BFF" />
+      </TouchableOpacity>
+
+      {/* Skip Button */}
+      <TouchableOpacity
+        style={styles.skipButton}
+        onPress={() => router.push("/login")} // Navigates to the login screen
+      >
+        <Text style={styles.skipButtonText}>Skip</Text>
+      </TouchableOpacity>
+
       {/* Title */}
       <Text style={styles.title}>Plan Your Adventure</Text>
 
@@ -27,7 +43,7 @@ export default function OnboardingScreen2() {
         easy-to-use planning tools.
       </Text>
 
-      {/* Button */}
+      {/* Next Button */}
       <TouchableOpacity
         style={styles.button}
         onPress={() => router.push("/screen3")}
@@ -45,12 +61,31 @@ const styles = StyleSheet.create({
     padding: 20,
     justifyContent: "space-between", // Spacing between elements
   },
+  backButton: {
+    position: "absolute",
+    top: 10,
+    left: 20, // Positioning on the top-left corner
+    padding: 10,
+    zIndex: 10, // Ensures the button appears above other elements
+  },
+  skipButton: {
+    position: "absolute",
+    top: 10,
+    right: 20, // Positioning on the top-right corner
+    padding: 10,
+    zIndex: 10, // Ensures the button appears above other elements
+  },
+  skipButtonText: {
+    fontSize: 16,
+    color: "#007BFF",
+    fontWeight: "bold",
+  },
   title: {
     fontSize: 28,
     fontWeight: "bold",
     color: "#333",
     textAlign: "center",
-    marginTop: 10, // Slight margin at the top
+    marginTop: 40, // Adds space from the top of the screen
   },
   imageBox: {
     alignSelf: "center",

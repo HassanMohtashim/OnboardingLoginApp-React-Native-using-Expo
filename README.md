@@ -9,21 +9,21 @@ Welcome to the **Onboarding Login App**! This app provides a simple user interfa
 ### 1. **Onboarding Screen 1**
 This onboarding screen explains the app's core features and guides users on how to get started.
 
-![Onboarding Screen 1](./assets/screenshots/onboarding_screen_1.png)
+![Onboarding Screen 1](./assets/screenshot/onboarding_screen_1.png)
 
 ---
 
 ### 2. **Onboarding Screen 2**
 This screen provides additional information about the app’s functionality and how it will benefit the user.
 
-![Onboarding Screen 2](./assets/screenshots/onboarding_screen_2.png)
+![Onboarding Screen 2](./assets/screenshot/onboarding_screen_2.png)
 
 ---
 
 ### 3. **Onboarding Screen 3**
 The final onboarding screen offers the option to skip onboarding or proceed to the main screen.
 
-![Onboarding Screen 3](./assets/screenshots/onboarding_screen_3.png)
+![Onboarding Screen 3](./assets/screenshot/onboarding_screen_3.png)
 
 ---
 
